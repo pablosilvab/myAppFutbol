@@ -1,0 +1,26 @@
+<div class="container">
+  <h3>Clubes</h3>
+
+  <button type="button" class="btn btn-primary btn-sm" (click)="add()">
+    Añadir club
+  </button>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Detalles</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of clubes; ">
+        <td>{{c.nombre}}</td>
+        <td>
+          <a routerLink="/club-detail/{{c.idClub}}">
+            <i class="fa fa-info-circle"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
